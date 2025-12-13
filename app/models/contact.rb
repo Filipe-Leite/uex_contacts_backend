@@ -24,7 +24,7 @@ class Contact < ApplicationRecord
     return if cpf.blank?
     
     unless CPF.valid?(cpf)
-      errors.add(:cpf, 'inválido')
+      errors.add(:cpf, 'invalid')
     end
   end
   
