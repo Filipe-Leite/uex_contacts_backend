@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     sessions: 'overrides/sessions'
   }
 
-  get 'contacts',                                           to: 'contacts#index'
+  get '/contacts',                                           to: 'contacts#index'
+  get '/search',                           to: 'search#index'
 end
