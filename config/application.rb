@@ -13,5 +13,8 @@ module UexContactsBackend
 
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
+
+    config.autoload_paths << Rails.root.join('app/services')
+    config.autoload_paths += Dir[Rails.root.join('app', 'services', '**/')]
   end
 end

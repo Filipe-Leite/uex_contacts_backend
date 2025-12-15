@@ -23,19 +23,6 @@ class SearchController < ApplicationController
   def search_contact(query)
     contacts = Contact.all.order(name: :asc)
 
-    p "query>>>>, #{query}"
-    p "query>>>>, #{query}"
-    p "query>>>>, #{query}"
-    p "query>>>>, #{query}"
-    p "query>>>>, #{query}"
-    p "query>>>>, #{query}"
-    p "query>>>>, #{query}"
-    p "query>>>>, #{query}"
-    p "query>>>>, #{query}"
-    p "query>>>>, #{query}"
-    p "query>>>>, #{query}"
-    p "query>>>>, #{query}"
-    p "query>>>>, #{query}"
     if query.present?
       lower_query = query.downcase
       contacts = contacts.where("LOWER(name) LIKE ?", "%#{lower_query}%")

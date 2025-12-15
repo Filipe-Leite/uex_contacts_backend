@@ -28,3 +28,4 @@ gem 'figaro'
 gem 'geocoder'
 gem 'pagy'
 gem 'pundit'
+gem 'dotenv-rails', groups: [:development, :test]

@@ -10,5 +10,9 @@ Rails.application.routes.draw do
   }
 
   get '/contacts',                                           to: 'contacts#index'
+  post '/contacts',                                          to: 'contacts#create'
+  
   get '/search',                           to: 'search#index'
+
+  get 'services/cep/:cep', to: 'services#show'
 end
